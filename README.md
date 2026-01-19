@@ -1,4 +1,4 @@
-# Prediction Kirby's Dream Land
+# Kirby's Dream Land - Deep Learning Project
 
 ## Project Overview
 For this project, ... WIP
