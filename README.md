@@ -1,19 +1,14 @@
 # Prediction Kirby's Dream Land
 
 ## Project Overview
-For this project, I build models taught in DA 460 - Predictive Analytics (at the Univeristy of North Alabama) to predict what move someone should make when playing Kirby's Dream Land at any given time. A description of the files found in this project are shown below:
+For this project, ... WIP
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
 | [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
-| [DA_460_Project.pdf](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/DA_460_Project.pdf)              | The paper for the course project                                                        |
-| [DA_460_Project.zip](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/DA_460_Project.zip)            | LaTeX source of the paper |
-| [index.html](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/index.html)                    | html file containing the decision tree, it can be viewed [here](https://lucashasting.github.io/Prediction-Kirbys-Dream-Land/)                |
 | [kdl_csv.zip](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
 | [get_data.py](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/get_data.py)                    | python file to data.json used in KirbysDreamLand-GameBoy                 |
 | [game_data.py](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/game_data.py)                    | python file to create kdl.csv                |
-| [models.py](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/models.py)                   | python program to build/test models                |
-| [params.py](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/params.py)                   | python program to find parameters for the  models                |
 | [summary_statistics.py](https://github.com/LucasHasting/Prediction-Kirbys-Dream-Land/blob/main/summary_statistics.py)                    | python program to output summary statistics of the data                |
 
 ## Build Instructions
