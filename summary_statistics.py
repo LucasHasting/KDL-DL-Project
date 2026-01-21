@@ -3,7 +3,6 @@
 #Date:          12/7/2025
 #Instructor:    Dr. Imbrogno
 #Description:   Get summary stats of kdl.csv file
-#Sources:       ChatGPT was used for syntax
 
 #import libraries
 import pandas as pd

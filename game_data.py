@@ -4,8 +4,7 @@
 #Instructor:    Dr. Imbrogno
 #Description:   Course Project - Record game data and movements made by the player of Kirby's Dream Land
 #               - q to quit, z = a, x = b, arrow keys to move
-#Sources:       ChatGPT was used for syntax
-#               https://retro.readthedocs.io/en/latest/index.html
+#Sources:       https://retro.readthedocs.io/en/latest/index.html
 
 #import libraries
 import retro
