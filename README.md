@@ -13,7 +13,7 @@ For this project, ... WIP
 
 ## Build Instructions
 
-First, ensure python version 8.0 is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/).
+First, ensure python version 8.0 is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/).
 
 Next, go to where python is installed in the terminal/cmd prompt using 
 
@@ -32,11 +32,13 @@ Once in the directory, on the command prompt, run the following commands (on win
 ```sh
 python -m pip install --upgrade pip
 python -m pip install gym-retro
-python -m pip install gym==0.21
 python -m pip install scikit-learn
 python -m pip install matplotlib
 python -m pip install pandas
 python -m pip install keyboard
+python -m pip uninstall setuptools
+python -m pip install setuptools==65.5.0
+python -m pip install git+https://github.com/openai/gym.git@9180d12e1b66e7e2a1a622614f787a6ec147ac40
 ```
 
 Next, in a separate window, move the KirbysDreamLand-GameBoy folder to the following directory: 
