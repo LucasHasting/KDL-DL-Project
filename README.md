@@ -13,7 +13,7 @@ For this project, ... WIP
 
 ## Build Instructions
 
-First, ensure python version 8.0 is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/).
+First, ensure python version 8.0 (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/).
 
 Next, go to where python is installed in the terminal/cmd prompt using 
 
