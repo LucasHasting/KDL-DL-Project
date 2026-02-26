@@ -7,9 +7,6 @@ For this project, ... WIP
 |-------------------------|----------------------------------------------------------------------------------|
 | [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
 | [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
-| [get_data.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/get_data.py)                    | python file to data.json used in KirbysDreamLand-GameBoy                 |
-| [game_data.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/game_data.py)                    | python file to create kdl.csv                |
-| [summary_statistics.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/summary_statistics.py)                    | python program to output summary statistics of the data                |
 
 ## Build Instructions
 

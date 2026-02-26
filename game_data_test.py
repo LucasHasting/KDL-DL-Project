@@ -1,22 +1,27 @@
 #Name:          Lucas Hasting
-#Class:         DA 460
-#Date:          12/7/2025
-#Instructor:    Dr. Imbrogno
-#Description:   Course Project - Record game data and movements made by the player of Kirby's Dream Land
+#Class:         MA 395
+#Date:          ~/~/~
+#Instructor:    Dr. Terwilliger
+#Description:   Course Project - Test state model with API
 #               - q to quit, z = a, x = b, arrow keys to move
-#Sources:       https://retro.readthedocs.io/en/latest/index.html
+#               https://retro.readthedocs.io/en/latest/index.html
 
 #import libraries
 import retro
 import time
 import keyboard
 import pandas as pd
+import requests
+
+def min_max_normalization(x, old_min, old_max, new_min, new_max):
+    return ((x - old_min) / (old_max - old_min) * (new_max - new_min) + new_min)
 
 #set the frames per second
 FPS = 60
 
 #the starting game state
 STATE_FILE = "begginning.state"
+CSV_FILE_NAME = "kdl2.1.csv"
 
 #create map of inputs to position in action array
 INPUTS = {
@@ -78,39 +83,40 @@ def load_other_data(info,n,typ):
             data.append(info[f"{typ}{i+1}_{j}"])
     return data
 
-
 #load in all the data
-def load_data(info, move):
+def load_data(info):
+#store the data
     screen_data = load_other_data(info, 40, "screen")
     tile_data = load_other_data(info, 41, "tile")
-    boss_health = info["boss_health"]
-    kirby_x_scrol = info["kirby_x_scrol"]
-    kirby_x = info["kirby_x"]
-    kirby_y_scrol = info["kirby_y_scrol"]
-    kirby_y = info["kirby_y"]
-    game_state = info["game_state"]
+    boss_health = float(info["boss_health"])
+    kirby_x_scrol = float(info["kirby_x_scrol"])
+    kirby_x = min_max_normalization(float(info["kirby_x"]), 0, 65535, 0, 255)
+    kirby_y_scrol = float(info["kirby_y_scrol"])
+    kirby_y = min_max_normalization(float(info["kirby_y"]), 0, 65535, 0, 255)
+    game_state = float(info["game_state"])
+    game_state_array = [0.0]*9
 
-    return [*screen_data, *tile_data, game_state, boss_health, kirby_y, kirby_y_scrol, kirby_x_scrol, kirby_x, move]
-
-#write the data to a csv file
-def write_to_csv(data, filename):
-    #create column names
-    column = []
-
-    for i in range(40):
-        for j in range(4):
-            column.append(f"screen{i+1}_{j}")
-
-    for i in range(41):
-        for j in range(4):
-            column.append(f"tile{i+1}_{j}")
-
-    column += ["game_state", "boss_health", "kirby_y", "kirby_y_scrol"]
-    column += ["kirby_x_scrol", "kirby_x", "move"]
-
-    #save file
-    df = pd.DataFrame(data, columns=column)
-    df.to_csv(filename, index=False)
+    #accounts for dummys/min-max norm
+    if(game_state == 1):
+        game_state_array[0] = 255.0
+    elif(game_state == 2):
+        game_state_array[1] = 255.0
+    elif(game_state == 3):
+        game_state_array[2] = 255.0
+    elif(game_state == 4):
+        game_state_array[3] = 255.0
+    elif(game_state == 5):
+        game_state_array[4] = 255.0
+    elif(game_state == 6):
+        game_state_array[5] = 255.0
+    elif(game_state == 7):
+        game_state_array[6] = 255.0
+    elif(game_state == 8):
+        game_state_array[7] = 255.0
+    elif(game_state == 11):
+        game_state_array[8] = 255.0
+    
+    return {"data" : [*screen_data, *tile_data, boss_health, kirby_y, kirby_y_scrol, kirby_x_scrol, kirby_x, *game_state_array]}
 
 #function is a new renderer that uses the FPS to determine speed
 def new_render(env):
@@ -118,6 +124,8 @@ def new_render(env):
     env.render()
 
 def main():
+    state = ""
+    
     #start gym retro enviornment
     env = retro.make('KirbysDreamLand-GB',STATE_FILE)
     env.reset()
@@ -130,7 +138,9 @@ def main():
     data = []
 
     while(True):
-        #determine action from keyboard, if q is pressed, quite game and store data
+        prev_state = state
+        
+        #determine action from keyboard
         action, move = make_action("NONE")
         if keyboard.is_pressed('up') and keyboard.is_pressed('left'):
             action, move = make_action("UP-LEFT")
@@ -160,6 +170,24 @@ def main():
             action, move = make_action("A")
         elif keyboard.is_pressed(b):
             action, move = make_action("B")
+
+        #state change buttons
+        elif (keyboard.is_pressed('u')):
+            state = "VERTICAL-UP"
+        elif (keyboard.is_pressed('j')):
+            state = "VERTICAL-DOWN"
+        elif (keyboard.is_pressed('h')):
+            state = "HORIZONTAL-LEFT"
+        elif (keyboard.is_pressed('k')):
+            state = "HORIZONTAL-RIGHT"
+        elif (keyboard.is_pressed('n')):
+            state = "NOTHING"
+        elif (keyboard.is_pressed('b')):
+            state = "BOSS"
+        elif (keyboard.is_pressed('m')):
+            state = "DOOR-PRESENT"
+
+        #quit
         elif (keyboard.is_pressed('q')):
             break
 
@@ -167,15 +195,18 @@ def main():
         ob, rew, done, info = env.step(action)
         new_render(env)
 
-        #record the data
-        data.append(load_data(info, move))
+        #predict state using model api
+        url = 'http://127.0.0.1:8000//predict'
+        response = requests.post(url, json=load_data(info))
+        check = response.json()
+        state = check["prediction"]
+
+        if(prev_state != state):
+            print(state)
 
     #close the gym retro enviornment
     env.render(close=True)
     env.close()
-
-    #write data to file
-    write_to_csv(data, "kdl.csv")
 
     print("FINISHED!")
 
