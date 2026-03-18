@@ -1,3 +1,6 @@
+from torch import nn
+import copy
+
 class KirbyNet(nn.Module):
     """mini CNN structure
   input -> (conv2d + relu) x 3 -> flatten -> (dense + relu) x 2 -> output

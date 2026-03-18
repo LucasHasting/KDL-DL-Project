@@ -1,3 +1,10 @@
+import torch
+from torch import nn
+from kirbyNet import KirbyNet
+from tensordict import TensorDict
+from torchrl.data import TensorDictReplayBuffer, LazyMemmapStorage
+import numpy as np
+
 class kirbyBoss1:
     def __init__(self, state_dim, action_dim, save_dir):
         self.state_dim = state_dim
@@ -114,3 +121,28 @@ class kirbyBoss1:
         loss = self.update_Q_online(td_est, td_tgt)
 
         return (td_est.mean().item(), loss)
+
+    def cache(self, state, next_state, action, reward, done):
+        """
+        Store the experience to self.memory (replay buffer)
+
+        Inputs:
+        state (LazyFrame),
+        next_state (LazyFrame),
+        action (int),
+        reward (float),
+        done(bool))
+        """
+        def first_if_tuple(x):
+            return x[0] if isinstance(x, tuple) else x
+        state = first_if_tuple(state).__array__()
+        next_state = first_if_tuple(next_state).__array__()
+
+        state = torch.tensor(state)
+        next_state = torch.tensor(next_state)
+        action = torch.tensor([action])
+        reward = torch.tensor([reward])
+        done = torch.tensor([done])
+
+        # self.memory.append((state, next_state, action, reward, done,))
+        self.memory.add(TensorDict({"state": state, "next_state": next_state, "action": action, "reward": reward, "done": done}, batch_size=[]))
