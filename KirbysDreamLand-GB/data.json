@@ -1319,6 +1319,14 @@
 		"kirby_y": {
 			"address": 53333,
 			"type": ">u2"
+		},
+		"kirby_health": {
+			"address": 53382,
+			"type": ">u1"
+		},
+		"score": {
+			"address": 53389,
+			"type": ">u2"
 		}
 	}
 }
