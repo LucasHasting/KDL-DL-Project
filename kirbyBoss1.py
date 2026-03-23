@@ -21,15 +21,15 @@ class kirbyBoss1:
         self.exploration_rate_decay = 0.99999975
         self.exploration_rate_min = 0.01
         self.deque_size = 500000
-        self.batch_size = 64 #32 instead?
-        self.curr_step = 0 
-        self.save_every = 2e5  # no. of experiences between saving kibry net
+        self.batch_size = 64 #!!!
+        self.curr_step = 0 #&&&&&&
+        self.save_every = 2e5  # no. of experiences between saving Mario Net
         self.memory = TensorDictReplayBuffer(storage=LazyMemmapStorage(100000, device=torch.device("cpu"))) #&&&&&&
         self.gamma = 0.8
         self.optimizer = torch.optim.Adam(self.net.parameters(), lr=0.0002)
         self.loss_fn = torch.nn.SmoothL1Loss()
         self.burnin = 1000  # min. experiences before training
-        self.learn_every = 3  # no. of experiences between updates to Q_online   
+        self.learn_every = 3  # no. of experiences between updates to Q_online   &&&&&&
         self.sync_every = 100  # no. of experiences between Q_target & Q_online sync
 
     def act(self, state):
@@ -146,3 +146,12 @@ class kirbyBoss1:
 
         # self.memory.append((state, next_state, action, reward, done,))
         self.memory.add(TensorDict({"state": state, "next_state": next_state, "action": action, "reward": reward, "done": done}, batch_size=[]))
+
+    
+    def recall(self):
+        """
+        Retrieve a batch of experiences from memory
+        """
+        batch = self.memory.sample(self.batch_size).to(self.device)
+        state, next_state, action, reward, done = (batch.get(key) for key in ("state", "next_state", "action", "reward", "done"))
+        return state, next_state, action.squeeze(), reward.squeeze(), done.squeeze()

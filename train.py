@@ -51,7 +51,6 @@ env = SkipFrame(env, skip=4)
 env = GrayScaleObservation(env)
 env = ResizeObservation(env, shape=84)
 env = FrameStack(env, num_stack=4)
-#--------------------------------------------------------------passed
 
 use_cuda = torch.cuda.is_available()
 print(f"Using CUDA: {use_cuda}")
@@ -80,7 +79,7 @@ for e in range(episodes):
         print(ACTION_SPACE_MAP[action], reward)
 
         # Remember
-        #KB1.cache(state, next_state, action, reward, done)
+        KB1.cache(state, next_state, action, reward, done)
 
         # Learn
         q, loss = KB1.learn()
