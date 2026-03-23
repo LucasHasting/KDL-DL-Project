@@ -91,8 +91,8 @@ for e in range(episodes):
         state = next_state
 
         # Check if end of game
-	#if boss1 defeated or dead
-        if keyboard.is_pressed('q'):
+	    #if boss1 defeated or dead -> info["boss_health"] == 0
+        if keyboard.is_pressed('q') or info["kirby_health"] == 0:
             break
 
         new_render(env)
