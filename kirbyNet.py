@@ -18,7 +18,7 @@ class KirbyNet(nn.Module):
             nn.Conv2d(in_channels=32, out_channels=32, kernel_size=2, stride=1),
             nn.ReLU(),
             nn.Flatten(),
-            nn.Linear(3744, 512),
+            nn.Linear(189728, 512),
             nn.ReLU(),
             nn.Linear(512, output_dim)
         )

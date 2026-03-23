@@ -111,6 +111,10 @@ class kirbyBoss1:
         # Sample from memory
         state, next_state, action, reward, done = self.recall()
 
+        #transform states to be useable
+        state = state.float() / 255.0
+        next_state = next_state.float() / 255.0
+
         # Get TD Estimate
         td_est = self.td_estimate(state, action)
 
@@ -137,6 +141,8 @@ class kirbyBoss1:
             return x[0] if isinstance(x, tuple) else x
         state = first_if_tuple(state).__array__()
         next_state = first_if_tuple(next_state).__array__()
+        state = np.array(state, copy=False).astype(np.uint8)
+        next_state = np.array(next_state, copy=False).astype(np.uint8)
 
         state = torch.tensor(state)
         next_state = torch.tensor(next_state)
