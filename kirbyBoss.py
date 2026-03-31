@@ -5,7 +5,7 @@ from tensordict import TensorDict
 from torchrl.data import TensorDictReplayBuffer, LazyMemmapStorage
 import numpy as np
 
-class kirbyBoss1:
+class kirbyBoss:
     def __init__(self, state_dim, action_dim, save_dir):
         self.state_dim = state_dim
         self.action_dim = action_dim
@@ -23,8 +23,8 @@ class kirbyBoss1:
         self.deque_size = 500000
         self.batch_size = 64 #!!!
         self.curr_step = 0 #&&&&&&
-        self.save_every = 2e5  # no. of experiences between saving Mario Net
-        self.memory = TensorDictReplayBuffer(storage=LazyMemmapStorage(100000, device=torch.device("cpu"))) #&&&&&&
+        self.save_every = 2e5  # no. of experiences between saving Kirby Net
+        self.memory = TensorDictReplayBuffer(storage=LazyMemmapStorage(100000, device=torch.device("cpu")))
         self.gamma = 0.8
         self.optimizer = torch.optim.Adam(self.net.parameters(), lr=0.0002)
         self.loss_fn = torch.nn.SmoothL1Loss()

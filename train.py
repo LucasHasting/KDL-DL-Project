@@ -12,7 +12,7 @@ from gym.wrappers import FrameStack
 
 #import files
 from functions import GetReward, new_step, min_max_normalization
-from kirbyBoss1 import kirbyBoss1 
+from kirbyBoss import kirbyBoss 
 from kirbyNet import KirbyNet 
 from logger import MetricLogger
 from wrappers import SkipFrame, GrayScaleObservation, ResizeObservation, ResetCompatWrapper
@@ -44,8 +44,8 @@ def new_render(env):
 STATE_FILE = "begginning.state"
 env = retro.make('KirbysDreamLand-GB',STATE_FILE)
 env.reset()
-env = ResetCompatWrapper(env)   # ← wrap base env FIRST
-env = SkipFrame(env, skip=4)
+env = ResetCompatWrapper(env)   # wrap base env FIRST
+env = SkipFrame(env, skip=1)
 env = GrayScaleObservation(env)
 env = ResizeObservation(env, shape=84)
 env = FrameStack(env, num_stack=4)
@@ -57,7 +57,7 @@ print()
 save_dir = Path("checkpoints") / datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 save_dir.mkdir(parents=True)
 
-KB1 = kirbyBoss1(state_dim=(4, 84, 84), action_dim=ACTION_SPACE_N, save_dir=save_dir)
+KB1 = kirbyBoss(state_dim=(4, 84, 84), action_dim=ACTION_SPACE_N, save_dir=save_dir)
 
 log = MetricLogger(save_dir)
 

@@ -31,10 +31,10 @@ class SkipFrame(gym.Wrapper):
         """
             Simultanious action implemention
         """
-        #get info for env step
+        #get info for env step XXX
         state, reward, done, info_old = self.env.step(ACTION_SPACE_MAP[1])
 
-        #make action for 0.5 seconds, replace skip with 32? XXX
+        #make action for 0.5 seconds XXX
         for i in range(32):
                 observation, reward, done, info_new = self.env.step(action=action)
 
@@ -42,18 +42,6 @@ class SkipFrame(gym.Wrapper):
         reward = GetReward(info_old, info_new)
 
         return observation, reward, done, info_new
-
-        '''
-        """Repeat action, and sum reward"""
-        total_reward = 0.0
-        for i in range(self._skip):
-            # Accumulate reward and repeat the same action
-            obs, reward, done, trunk, info = self.env.step(action)
-            total_reward += reward
-            if done:
-                break
-        return obs, total_reward, done, trunk, info
-        '''
 
 class GrayScaleObservation(gym.ObservationWrapper):
     def __init__(self, env):
