@@ -28,12 +28,12 @@ Once in the directory, on the command prompt, run the following commands (on win
 
 ```sh
 python -m pip install --upgrade pip
-python -m pip install gym-retro
+python -m pip install gym-retro 
 python -m pip install scikit-learn
 python -m pip install matplotlib
 python -m pip install pandas
 python -m pip install keyboard
-python -m pip uninstall setuptools
+python -m pip uninstall -y setuptools
 python -m pip install setuptools==65.5.0
 python -m pip install git+https://github.com/openai/gym.git@9180d12e1b66e7e2a1a622614f787a6ec147ac40
 python -m pip install torch
@@ -41,6 +41,7 @@ python -m pip install matplotlib
 python -m pip install tensordict
 python -m pip install torchrl
 python -m pip install torchvision
+python -m pip install requests
 ```
 
 Next, in a separate window, move the KirbysDreamLand-GameBoy folder to the following directory: 
