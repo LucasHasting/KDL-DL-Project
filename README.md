@@ -36,11 +36,10 @@ python -m pip install keyboard
 python -m pip uninstall -y setuptools
 python -m pip install setuptools==65.5.0
 python -m pip install git+https://github.com/openai/gym.git@9180d12e1b66e7e2a1a622614f787a6ec147ac40
-python -m pip install torch
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
 python -m pip install matplotlib
 python -m pip install tensordict
 python -m pip install torchrl
-python -m pip install torchvision
 python -m pip install requests
 ```
 
