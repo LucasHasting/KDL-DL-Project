@@ -39,7 +39,7 @@ class kirbyBoss:
     Inputs:
     state(``LazyFrame``): A single observation of the current state, dimension is (state_dim)
     Outputs:
-    ``action_idx`` (``int``): An integer representing which action Mario will perform
+    ``action_idx`` (``int``): An integer representing which action Kirby will perform
     """
         # EXPLORE
         if np.random.rand() < self.exploration_rate:
@@ -87,13 +87,19 @@ class kirbyBoss:
 
     def save(self):
         save_path = (
-            self.save_dir / f"mario_net_{int(self.curr_step // self.save_every)}.chkpt"
+            self.save_dir / f"kirby_net_{int(self.curr_step // self.save_every)}.chkpt"
         )
         torch.save(
             dict(model=self.net.state_dict(), exploration_rate=self.exploration_rate),
             save_path,
         )
-        print(f"MarioNet saved to {save_path} at step {self.curr_step}")
+        print(f"KirbyNet saved to {save_path} at step {self.curr_step}")
+
+    def loadModel(self, path):
+        dt = torch.load(path, map_location=torch.device(self.device))
+        self.net.load_state_dict(dt["model"])
+        self.exploration_rate = dt["exploration_rate"]
+        print(f"Loading model at {path} with exploration rate {self.exploration_rate}")
 
     def learn(self):
         if self.curr_step % self.sync_every == 0:
