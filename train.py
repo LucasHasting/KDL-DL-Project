@@ -90,7 +90,7 @@ while not end:
 
         # Check if end of game
 	    #if boss1 defeated or dead -> info["boss_health"] == 0
-        if keyboard.is_pressed('q') or info["kirby_health"] == 0:
+        if keyboard.is_pressed('q') or info["kirby_health"] == 0 or info["boss_health"] == 0:
             if keyboard.is_pressed('q'):
                 end=True
             break
