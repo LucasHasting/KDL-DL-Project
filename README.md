@@ -1,7 +1,4 @@
 # Kirby's Dream Land - Deep Learning Project
-
-## Table of Contents
-
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -12,7 +9,7 @@
 ## Project Overview
 A report of this project can be read here (WIP), and a presentation of the project can be found here (WIP).
 
-For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro. The following table includes a description of the files used in the project:
+For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro, Q-Learning, and PyTorch. The following table includes a description of the files used in the project:
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
@@ -132,3 +129,32 @@ uvicorn api:app
 **Note: if you have issues using python, try replacing python with py.**
 
 ## Sources 
+* Old Project (this project expands the idea of this project): https://github.com/LucasHasting/Kirby-Dream-Land-AI
+* Similar Project: https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+* Mario RL Tutorial: https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+* Atari Project: https://arxiv.org/abs/1312.5602 
+* Kirby's Dream Land RAM Map: https://datacrystal.tcrf.net/wiki/Kirby%27s_Dream_Land/RAM_map
+* Wiki on Kirby's Dream Land: https://kirby.fandom.com/wiki/Kirby%27s_Dream_Land 
+* Inspiration for the project: https://www.youtube.com/watch?v=9YyQJIuN7n0
+
+Theory:
+* Machine Learning (breif intro): https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained 
+* Deep Learning: http://www.deeplearningbook.org (Chapters 5, 6, and 9 are the most helpful)
+* Holdout Method: https://mlbenchmarks.org/04-holdout-method.html 
+* (extra) Convolutional Neural Networks: https://www.ibm.com/think/topics/convolutional-neural-networks 
+* ADAM: https://www.geeksforgeeks.org/deep-learning/adam-optimizer
+
+Gym Retro Related:
+* https://openai.com/index/gym-retro/ 
+* https://retro.readthedocs.io/en/latest/
+* https://github.com/openai/retro/releases/tag/f347d7e
+* https://stackoverflow.com/questions/71973392/importerror-cannot-import-rendering-from-gym-envs-classic-control
+* https://github.com/openai/retro/issues/253
+
+Other
+* [FastAPI](geeksforgeeks.org/python/fastapi-uvicorn/#:~:text=Last%20Updated%20:%2023%20Jul%2C%202025,server%20interface%20for%20asynchronous%20frameworks.)
+* [scikit-learn](https://scikit-learn.org/stable/api/index.html)
+* [PyTorch](https://docs.pytorch.org/docs/stable/index.html)
+=======
+
+>>>>>>> 9c7e1bb7cfc82e02a7a77816b2477837cde04bf6
