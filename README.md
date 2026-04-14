@@ -47,7 +47,7 @@ State files that can be used for train.py are listed below:
 | [KirbysDreamLand-GameBoy/boss7.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss7.state) | Kraco |
 | [KirbysDreamLand-GameBoy/boss8.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss8.state) | King DeDeDe |
 
-Models created that can be loaded in are listed below (WIP):
+Models created that can be loaded can be downloaded [here](). The name of the file corresponds to the boss it is associated with. The Poppy Bros. Sr. model was used on both Lololo/Lalala fights.
 
 ## Build Instructions - The Project
 
@@ -95,7 +95,7 @@ Go back to the terminal/cmd window and run the following command, replace direct
 python -m retro.import <directory>
 ```
 
-Now, you can open idle (python version 8.0) and open->run project.py to execute the project (train.py). 
+Now, you can open idle (python version 8.0) and open->run train.py to execute the project. 
 
 ## Build Instructions - The API (Future Work)
 The API is designed to work with the project (see the report for more details), so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/).
