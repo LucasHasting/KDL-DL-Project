@@ -20,7 +20,7 @@ A report of this project can be read here (WIP), and a presentation of the proje
 
 ## Build Instructions - The Project
 
-First, ensure python version 8.0 (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/).
+First, ensure python version 8.0 (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/). It is highly recommended to use a CUDA GPU (you may need to lookup if your GPU is supported). You can install CUDA drivers [here](https://developer.nvidia.com/cuda-downloads).
 
 Next, go to where python is installed in the terminal/cmd prompt using 
 
