@@ -155,3 +155,4 @@ Other
 * [FastAPI](geeksforgeeks.org/python/fastapi-uvicorn/#:~:text=Last%20Updated%20:%2023%20Jul%2C%202025,server%20interface%20for%20asynchronous%20frameworks.)
 * [scikit-learn](https://scikit-learn.org/stable/api/index.html)
 * [PyTorch](https://docs.pytorch.org/docs/stable/index.html)
+* Applications of Reinforcement Learning: https://arxiv.org/pdf/1908.06973 
