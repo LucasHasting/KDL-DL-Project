@@ -1,5 +1,7 @@
 # Kirby's Dream Land - Deep Learning Project
 
+(WIP)
+
 ## Project Overview
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro. The following table includes a description of the files used in the project.
 
@@ -62,9 +64,21 @@ Go back to the terminal/cmd window and run the following command, replace direct
 python -m retro.import <directory>
 ```
 
-Now, you can open idle (python version 8.0) and open->run project.py to execute the project. 
+Now, you can open idle (python version 8.0) and open->run project.py to execute the project (train.py). 
 
 ## Build Instructions - The API (Future Work)
 The API is designed to work with the project, so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/) 
 
+Once in the directory, on the command prompt, run the following commands (on windows, replace python with python.exe):
 
+```sh
+python -m pip install scikit-learn
+python -m pip install joblib
+python -m pip install pydantic
+```
+
+Return to the directory of the project in the command line: ```cd <directory>``` and run the following command:
+
+```sh
+uvicorn api:app
+```
