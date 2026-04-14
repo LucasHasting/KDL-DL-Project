@@ -20,7 +20,6 @@ class kirbyBoss:
         self.exploration_rate = 1 
         self.exploration_rate_decay = 0.99999975
         self.exploration_rate_min = 0.01
-        self.deque_size = 500000
         self.batch_size = 64
         self.curr_step = 0 
         self.save_every = 2e5  # no. of experiences between saving Kirby Net

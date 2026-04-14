@@ -1,20 +1,26 @@
 # Kirby's Dream Land - Deep Learning Project
 
-(WIP)
-
 ## Project Overview
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro. The following table includes a description of the files used in the project:
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
-| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
-| [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
+| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand.                                           |
+| [train.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The driver program used to train the agents. |
+| [functions.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes helpful functions, the most helpful being the reward function. |
+| [kirbyBoss.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes all methods used for the Q-Learning Algorithm, and includes model hyper-parameters. |
+| [kirbyNet.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The Neural Network used for the target/online network. |
+| [logger.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes several methods used for logging results. |
+| [wrappers.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes several wrappers used for extending the behavior of Gym Retro. |
 
-Files included for potential future work are listed below:
+
+
+
+Files included for potential future work, or are just helpful are listed below:
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
 | [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
-| [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
+| [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip) | zip file that contains kdl.csv (the data used in the project) |
 
 A report of this project can be read here (WIP), and a presentation of the project can be found here (WIP).
 
@@ -96,3 +102,5 @@ uvicorn api:app
 ```
 
 **Note: if you have issues using python, try replacing python with py.**
+
+## Sources 
