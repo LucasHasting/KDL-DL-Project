@@ -1,28 +1,58 @@
 # Kirby's Dream Land - Deep Learning Project
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Files Used in the Project](#files-used-in-the-project)
+- [Additional / Future Work Files](#additional--future-work-files)
+- [State Files](#state-files)
+- [Models](#models)
+- [Build Instructions - The Project](#build-instructions---the-project)
+- [Build Instructions - The API (Future Work)](#build-instructions---the-api-future-work)
+- [Sources](#sources)
+
 ## Project Overview
+A report of this project can be read here (WIP), and a presentation of the project can be found here (WIP).
+
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro. The following table includes a description of the files used in the project:
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
 | [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand.                                           |
-| [train.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The driver program used to train the agents. |
-| [functions.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes helpful functions, the most helpful being the reward function. |
-| [kirbyBoss.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes all methods used for the Q-Learning Algorithm, and includes model hyper-parameters. |
-| [kirbyNet.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The Neural Network used for the target/online network. |
-| [logger.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes several methods used for logging results. |
-| [wrappers.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | Includes several wrappers used for extending the behavior of Gym Retro. |
-
-
-
+| [train.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/train.py) | The driver program used to train the agents. |
+| [functions.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/functions.py) | Includes helpful functions, the most helpful being the reward function. |
+| [kirbyBoss.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/kirbyBoss.py) | Includes all methods used for the Q-Learning Algorithm, and includes model hyper-parameters. |
+| [kirbyNet.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/kirbyNet.py) | The Neural Network used for the target/online network. |
+| [logger.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/logger.py) | Includes several methods used for logging results. |
+| [wrappers.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/wrappers.py) | Includes several wrappers used for extending the behavior of Gym Retro. |
 
 Files included for potential future work, or are just helpful are listed below:
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
-| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
-| [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip) | zip file that contains kdl.csv (the data used in the project) |
+| [check.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/check.py) | File used to check to see if CUDA is enabled/can be used. |
+| [kdl_state.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_state.zip) | zip file that contains kdl.csv (the data used to create the decision tree) |
+| [game_data_record.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/game_data_record.py) | File used to manually record game data with ways to manually classify states. |
+| [DT.pkl](https://github.com/LucasHasting/KDL-DL-Project/blob/main/DT.pkl) | Binary data for the decision tree object. |
+| [params.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/params.py) | File used to conduct a parameter search for model.py using the holdout method. |
+| [model.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/model.py) | File used to build the scikit-learn model. |
+| [api.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/api.py) | API used to make predicions using a scikit-learn model - in the file we use DT.pkl (a decision tree model). |
+| [game_data_test.py](https://github.com/LucasHasting/KDL-DL-Project/blob/main/game_data_test.py) | File used to test the API. |
 
-A report of this project can be read here (WIP), and a presentation of the project can be found here (WIP).
+State files that can be used for train.py are listed below:
+
+| File/Folder             | Description                                                                      |
+|-------------------------|----------------------------------------------------------------------------------|
+| [KirbysDreamLand-GameBoy/beginning.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/beginning.state) | The beginning of the game. |
+| [KirbysDreamLand-GameBoy/boss1.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss1.state) | Poppy Bros. Sr. |
+| [KirbysDreamLand-GameBoy/boss2.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss2.state) | Whispy Woods |
+| [KirbysDreamLand-GameBoy/boss3.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss3.state) | Lololo/Lalala (mini-boss) |
+| [KirbysDreamLand-GameBoy/boss4.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss4.state) | Lololo/Lalala (boss) |
+| [KirbysDreamLand-GameBoy/boss5.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss5.state) | Kabula |
+| [KirbysDreamLand-GameBoy/boss6.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss6.state) | Kraco Jr. |
+| [KirbysDreamLand-GameBoy/boss7.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss7.state) | Kraco |
+| [KirbysDreamLand-GameBoy/boss8.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss8.state) | King DeDeDe |
+
+Models created that can be loaded in are listed below (WIP):
 
 ## Build Instructions - The Project
 
