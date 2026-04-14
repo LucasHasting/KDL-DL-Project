@@ -2,11 +2,9 @@
 
 ## Table of Contents
 
+## Table of Contents
+
 - [Project Overview](#project-overview)
-- [Files Used in the Project](#files-used-in-the-project)
-- [Additional / Future Work Files](#additional--future-work-files)
-- [State Files](#state-files)
-- [Models](#models)
 - [Build Instructions - The Project](#build-instructions---the-project)
 - [Build Instructions - The API (Future Work)](#build-instructions---the-api-future-work)
 - [Sources](#sources)
