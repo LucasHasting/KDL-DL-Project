@@ -1,14 +1,22 @@
 # Kirby's Dream Land - Deep Learning Project
 
 ## Project Overview
-For this project, ... WIP
+For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro. The following table includes a description of the files used in the project.
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
 | [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
 | [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
 
-## Build Instructions
+Files included for potential future work are listed below:
+| File/Folder             | Description                                                                      |
+|-------------------------|----------------------------------------------------------------------------------|
+| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand                                              |
+| [kdl_csv.zip](https://github.com/LucasHasting/KDL-DL-Project/blob/main/kdl_csv.zip)                    | zip file that contains kdl.csv (the data used in the project)                |
+
+A report of this project can be read here (WIP), and a presentation of the project can be found here (WIP).
+
+## Build Instructions - The Project
 
 First, ensure python version 8.0 (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/release/python-380/) and that git is installed, it can be installed [here](https://git-scm.com/install/).
 
@@ -48,10 +56,15 @@ Next, in a separate window, move the KirbysDreamLand-GameBoy folder to the follo
 <directory of python installation>/Lib/site-packages/retro/data/stable/
 ```
 
-Go back to the terminal/cmd window and run the following command, replace directory with the location of the KirbysDreamLand-GameBoy folder (on windows, replace python with python.exe):
+Go back to the terminal/cmd window and run the following command, replace directory with the location of the KirbysDreamLand-GameBoy folder (on windows powershell, replace python with python.exe):
 
 ```sh
 python -m retro.import <directory>
 ```
 
 Now, you can open idle (python version 8.0) and open->run project.py to execute the project. 
+
+## Build Instructions - The API (Future Work)
+The API is designed to work with the project, so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/) 
+
+
