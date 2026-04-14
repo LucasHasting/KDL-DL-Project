@@ -155,6 +155,3 @@ Other
 * [FastAPI](geeksforgeeks.org/python/fastapi-uvicorn/#:~:text=Last%20Updated%20:%2023%20Jul%2C%202025,server%20interface%20for%20asynchronous%20frameworks.)
 * [scikit-learn](https://scikit-learn.org/stable/api/index.html)
 * [PyTorch](https://docs.pytorch.org/docs/stable/index.html)
-=======
-
->>>>>>> 9c7e1bb7cfc82e02a7a77816b2477837cde04bf6
