@@ -101,7 +101,7 @@ python -m retro.import <directory>
 Now, you can open idle (python version 8.0) and open->run project.py to execute the project (train.py). 
 
 ## Build Instructions - The API (Future Work)
-The API is designed to work with the project, so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/).
+The API is designed to work with the project (see the report for more details), so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/).
 
 Next, go to where python is installed in the terminal/cmd prompt using 
 
