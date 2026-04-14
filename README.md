@@ -37,15 +37,15 @@ State files that can be used for train.py are listed below:
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
-| [KirbysDreamLand-GameBoy/beginning.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/beginning.state) | The beginning of the game. |
-| [KirbysDreamLand-GameBoy/boss1.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss1.state) | Poppy Bros. Sr. |
-| [KirbysDreamLand-GameBoy/boss2.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss2.state) | Whispy Woods |
-| [KirbysDreamLand-GameBoy/boss3.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss3.state) | Lololo/Lalala (mini-boss) |
-| [KirbysDreamLand-GameBoy/boss4.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss4.state) | Lololo/Lalala (boss) |
-| [KirbysDreamLand-GameBoy/boss5.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss5.state) | Kabula |
-| [KirbysDreamLand-GameBoy/boss6.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss6.state) | Kraco Jr. |
-| [KirbysDreamLand-GameBoy/boss7.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss7.state) | Kraco |
-| [KirbysDreamLand-GameBoy/boss8.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GameBoy/boss8.state) | King DeDeDe |
+| [KirbysDreamLand-GameBoy/beginning.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/begginning.state) | The beginning of the game. |
+| [KirbysDreamLand-GameBoy/boss1.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss1.state) | Poppy Bros. Sr. |
+| [KirbysDreamLand-GameBoy/boss2.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss2.state) | Whispy Woods |
+| [KirbysDreamLand-GameBoy/boss3.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss3.state) | Lololo/Lalala (mini-boss) |
+| [KirbysDreamLand-GameBoy/boss4.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss4.state) | Lololo/Lalala (boss) |
+| [KirbysDreamLand-GameBoy/boss5.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss5.state) | Kabula |
+| [KirbysDreamLand-GameBoy/boss6.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss6.state) | Kraco Jr. |
+| [KirbysDreamLand-GameBoy/boss7.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss7.state) | Kraco |
+| [KirbysDreamLand-GameBoy/boss8.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss8.state) | King DeDeDe |
 
 Models created that can be loaded can be downloaded [here](). The name of the file corresponds to the boss it is associated with. The Poppy Bros. Sr. model was used on both Lololo/Lalala fights.
 
