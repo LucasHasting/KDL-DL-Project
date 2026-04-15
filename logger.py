@@ -1,3 +1,10 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - Logger for model
+#               https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+
 import numpy as np
 import time, datetime
 import matplotlib.pyplot as plt

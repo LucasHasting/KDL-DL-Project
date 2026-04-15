@@ -1,7 +1,7 @@
 #Name:          Lucas Hasting
 #Class:         MA 395
-#Date:          ~/~/~
-#Instructor:    Dr. Terwilliger
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
 #Description:   Course Project - API for using DT model in legacy system
 #               geeksforgeeks.org/python/fastapi-uvicorn/#:~:text=Last%20Updated%20:%2023%20Jul%2C%202025,server%20interface%20for%20asynchronous%20frameworks.
 

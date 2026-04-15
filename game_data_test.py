@@ -1,10 +1,11 @@
 #Name:          Lucas Hasting
 #Class:         MA 395
-#Date:          ~/~/~
-#Instructor:    Dr. Terwilliger
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
 #Description:   Course Project - Test state model with API
 #               - q to quit, z = a, x = b, arrow keys to move
 #               https://retro.readthedocs.io/en/latest/index.html
+#               https://en.wikipedia.org/wiki/Feature_scaling
 
 #import libraries
 import retro

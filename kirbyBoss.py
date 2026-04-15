@@ -1,3 +1,11 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - Object that contains methods for deep reinforcement learning
+#               https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+#               https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+
 import torch
 from torch import nn
 from kirbyNet import KirbyNet

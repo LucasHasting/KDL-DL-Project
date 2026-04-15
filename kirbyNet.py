@@ -1,3 +1,11 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - Neural Network for Online/Target Network (used in kirbyBoss.py)
+#               https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+#               https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+
 from torch import nn
 import copy
 
@@ -30,7 +38,6 @@ class KirbyNet(nn.Module):
            p.requires_grad = False
 
     def forward(self, input, model):
-        #print(len(input))
         if model == "online":
             return self.online(input)
         elif model == "target":

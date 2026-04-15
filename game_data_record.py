@@ -1,7 +1,7 @@
 #Name:          Lucas Hasting
 #Class:         MA 395
-#Date:          ~/~/~
-#Instructor:    Dr. Terwilliger
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
 #Description:   Course Project - Record game data, state, and movements made by the player of Kirby's Dream Land
 #               - q to quit, z = a, x = b, arrow keys to move
 #               https://retro.readthedocs.io/en/latest/index.html

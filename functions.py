@@ -1,8 +1,16 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - functions for normalization, reward, simultanious action (new_step)
+#               https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+#               https://en.wikipedia.org/wiki/Feature_scaling
 
-
+#min-max norm
 def min_max_normalization(x, old_min, old_max, new_min, new_max):
     return ((x - old_min) / (old_max - old_min) * (new_max - new_min) + new_min)
 
+#reward function
 def GetReward(previousGameState, currentGameState):
         if currentGameState["boss_health"] == 0 and previousGameState["boss_health"] > 0:
             return 10000
@@ -43,11 +51,8 @@ def GetReward(previousGameState, currentGameState):
                 return 100
         return 0
 
+#simultanious action implemention
 def new_step(self, env, action):
-        """
-            Simultanious action implemention
-        """
-
         #get info for env step
         state, reward, done, trunc, info_old = env.step(action=0)
 

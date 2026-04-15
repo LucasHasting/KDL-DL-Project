@@ -1,3 +1,20 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - Train an agent
+#               https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+#               https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+
+#import libraries
+from functions import GetReward
+import gym
+from gym.spaces import Box
+import numpy as np
+import torch
+from torchvision import transforms as T
+
+#action space
 ACTION_SPACE_MAP = {1: [0,0,0,0,0,0,0,0,0],
                 2: [0,0,0,0,0,0,0,0,1],
                 3: [1,0,0,0,0,0,0,0,0],
@@ -13,13 +30,6 @@ ACTION_SPACE_MAP = {1: [0,0,0,0,0,0,0,0,0],
                 13: [0,0,0,0,0,0,0,1,1],
                 14: [1,0,0,0,0,0,1,0,0],
                 15: [1,0,0,0,0,0,0,1,0]}
-
-from functions import GetReward
-import gym
-from gym.spaces import Box
-import numpy as np
-import torch
-from torchvision import transforms as T
 
 class SkipFrame(gym.Wrapper):
     def __init__(self, env, skip):

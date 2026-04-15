@@ -1,7 +1,7 @@
 #Name:          Lucas Hasting
 #Class:         MA 395
-#Date:          ~/~/~
-#Instructor:    Dr. Terwilliger
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
 #Description:   Parameter Search for models.py
 #               https://scikit-learn.org/stable/api/index.html
 #               https://mlbenchmarks.org/04-holdout-method.html

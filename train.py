@@ -1,3 +1,12 @@
+#Name:          Lucas Hasting
+#Class:         MA 395
+#Date:          4/14/2026
+#Instructor:    Dr. Mark Terwilliger
+#Description:   Course Project - Train an agent
+#               https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
+#               https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
+#               https://retro.readthedocs.io/en/latest/index.html
+
 #import libraries
 import retro
 import time
@@ -17,6 +26,7 @@ from kirbyNet import KirbyNet
 from logger import MetricLogger
 from wrappers import SkipFrame, GrayScaleObservation, ResizeObservation, ResetCompatWrapper
 
+#action space used in project
 ACTION_SPACE_N = 15
 
 ACTION_SPACE_MAP = {0: [0,0,0,0,0,0,0,0,0],
@@ -33,31 +43,31 @@ ACTION_SPACE_MAP = {0: [0,0,0,0,0,0,0,0,0],
                 11: [0,0,0,0,0,1,0,1,0],
                 12: [0,0,0,0,0,0,1,0,1],
                 13: [0,0,0,0,0,0,0,1,1],
-                14: [1,0,0,0,0,0,1,0,0]}
+                14: [1,0,0,0,0,0,1,0,0]}    
 
-FPS = 60
-
-def new_render(env):
-#    time.sleep(1/FPS)
-    env.render()
-
+#state file used
 STATE_FILE = "begginning.state"
+
+#make enviornment and apply wrappers
 env = retro.make('KirbysDreamLand-GB',STATE_FILE)
 env.reset()
-env = ResetCompatWrapper(env)   # wrap base env FIRST
+env = ResetCompatWrapper(env) 
 env = SkipFrame(env, skip=1)
 env = GrayScaleObservation(env)
 env = ResizeObservation(env, shape=84)
 env = FrameStack(env, num_stack=4)
 
+#use cuda GPU
 use_cuda = torch.cuda.is_available()
 print(f"Using CUDA: {use_cuda}")
 print()
 
+#set save path
 save_dir = Path("checkpoints") / datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 save_dir.mkdir(parents=True)
 
 KB1 = kirbyBoss(state_dim=(4, 84, 84), action_dim=ACTION_SPACE_N, save_dir=save_dir)
+#KB1.loadModel("model.chkpt")
 
 log = MetricLogger(save_dir)
 
@@ -95,7 +105,7 @@ while not end:
                 end=True
             break
 
-        new_render(env)
+        env.render()
 
     log.log_episode()
     log.record(episode=e, epsilon=KB1.exploration_rate, step=KB1.curr_step)
