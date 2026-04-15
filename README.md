@@ -47,7 +47,7 @@ State files that can be used for train.py are listed below:
 | [KirbysDreamLand-GameBoy/boss7.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss7.state) | Kraco |
 | [KirbysDreamLand-GameBoy/boss8.state](https://github.com/LucasHasting/KDL-DL-Project/blob/main/KirbysDreamLand-GB/boss8.state) | King DeDeDe |
 
-Models created that can be loaded can be downloaded [here](). The name of the file corresponds to the boss it is associated with. The Poppy Bros. Sr. model was used on both Lololo/Lalala fights.
+Models created that can be loaded can be downloaded [here](https://drive.google.com/drive/folders/16GwztSHmjUXrzZdCYKxPJaLNn5nWr3sl?usp=sharing). The name of the file corresponds to the boss it is associated with. The Poppy Bros. Sr. model was used on both Lololo/Lalala fights.
 
 ## Build Instructions - The Project
 
