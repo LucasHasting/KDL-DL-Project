@@ -13,7 +13,8 @@ For this project, we used deep reinforcement learning to learn how to play Kirby
 
 | File/Folder             | Description                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
-| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand.                                           |
+| [KirbysDreamLand-GameBoy](https://github.com/LucasHasting/KDL-DL-Project/tree/main/KirbysDreamLand-GB) | The integrated game KirbysDreamLand. 
+| [get_data.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/get_data.py) | File used to generate data.json used for the integrated game. |                                          |
 | [train.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/train.py) | The driver program used to train the agents. |
 | [functions.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/functions.py) | Includes helpful functions, the most helpful being the reward function. |
 | [kirbyBoss.py](https://github.com/LucasHasting/KDL-DL-Project/tree/main/kirbyBoss.py) | Includes all methods used for the Q-Learning Algorithm, and includes model hyper-parameters. |
