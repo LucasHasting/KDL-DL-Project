@@ -143,7 +143,7 @@ Theory:
 * Holdout Method: https://mlbenchmarks.org/04-holdout-method.html 
 * (extra) Convolutional Neural Networks: https://www.ibm.com/think/topics/convolutional-neural-networks 
 * ADAM: https://www.geeksforgeeks.org/deep-learning/adam-optimizer
-* normalization: https://en.wikipedia.org/wiki/Feature_scaling
+* Normalization: https://en.wikipedia.org/wiki/Feature_scaling
 
 Gym Retro Related:
 * https://openai.com/index/gym-retro/ 
