@@ -7,7 +7,7 @@
 - [Sources](#sources)
 
 ## Project Overview
-A report of this project can be read [here](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.zip)), and a presentation of the project can be found [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)).
+A report of this project can be read [here](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.zip)), and a presentation of the project can be found [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)). A video demonstration of this project can be viewed [here](https://youtu.be/TSWY3JiOhro)
 
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro, Q-Learning, and PyTorch. The following table includes a description of the files used in the project:
 
@@ -133,7 +133,8 @@ uvicorn api:app
 * Old Project (this project expands the idea of this project): https://github.com/LucasHasting/Kirby-Dream-Land-AI
 * Similar Project: https://raw.githubusercontent.com/lixado/PyBoy-RL/main/README/report.pdf
 * Mario RL Tutorial: https://docs.pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
-* Atari Project: https://arxiv.org/abs/1312.5602 
+* Atari Project (1): https://www.nature.com/articles/nature14236
+* Atari Project (2): https://arxiv.org/abs/1312.5602 
 * Kirby's Dream Land RAM Map: https://datacrystal.tcrf.net/wiki/Kirby%27s_Dream_Land/RAM_map
 * Wiki on Kirby's Dream Land: https://kirby.fandom.com/wiki/Kirby%27s_Dream_Land 
 * Inspiration for the project: https://www.youtube.com/watch?v=9YyQJIuN7n0
@@ -145,6 +146,9 @@ Theory:
 * (extra) Convolutional Neural Networks: https://www.ibm.com/think/topics/convolutional-neural-networks 
 * ADAM: https://www.geeksforgeeks.org/deep-learning/adam-optimizer
 * Normalization: https://en.wikipedia.org/wiki/Feature_scaling
+* Q-Learning: https://cml.rhul.ac.uk/qlearning.html
+* Double Q-Learning: https://proceedings.neurips.cc/paper_files/paper/2010/file/091d584fced301b442654dd8c23b3fc9-Paper.pdf
+* Kaiming Initialization: https://www.geeksforgeeks.org/deep-learning/kaiming-initialization-in-deep-learning/
 
 Gym Retro Related:
 * https://openai.com/index/gym-retro/ 
@@ -157,4 +161,4 @@ Other
 * [FastAPI](geeksforgeeks.org/python/fastapi-uvicorn/#:~:text=Last%20Updated%20:%2023%20Jul%2C%202025,server%20interface%20for%20asynchronous%20frameworks.)
 * [scikit-learn](https://scikit-learn.org/stable/api/index.html)
 * [PyTorch](https://docs.pytorch.org/docs/stable/index.html)
-* Applications of Reinforcement Learning: https://arxiv.org/pdf/1908.06973 
+* Applications of Reinforcement Learning: https://arxiv.org/pdf/1908.06973
