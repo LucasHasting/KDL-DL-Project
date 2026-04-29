@@ -7,7 +7,7 @@
 - [Sources](#sources)
 
 ## Project Overview
-A report of this project can be read (WIP), and a presentation of the project can be found here [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)).
+A report of this project can be read [here](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.zip)), and a presentation of the project can be found here [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)).
 
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro, Q-Learning, and PyTorch. The following table includes a description of the files used in the project:
 
