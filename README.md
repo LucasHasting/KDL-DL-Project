@@ -7,7 +7,7 @@
 - [Sources](#sources)
 
 ## Project Overview
-A report of this project can be read [here](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.zip)), and a presentation of the project can be found here [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)).
+A report of this project can be read [here](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.zip)), and a presentation of the project can be found [here](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation.pdf) ([source](https://github.com/LucasHasting/KDL-DL-Project/tree/main/presentation_source.zip)).
 
 For this project, we used deep reinforcement learning to learn how to play Kirby's Dream Land on the Nintendo Gameboy using Gym Retro, Q-Learning, and PyTorch. The following table includes a description of the files used in the project:
 
@@ -99,7 +99,7 @@ python -m retro.import <directory>
 Now, you can open idle (python version 8.0) and open->run train.py to execute the project. 
 
 ## Build Instructions - The API (Future Work)
-The API is designed to work with the project (see the report for more details), so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/).
+The API is designed to work with the project (see the [report](https://github.com/LucasHasting/KDL-DL-Project/blob/main/MA_395_Project.pdf) for more details), so ensure the project has been built first. Next, ensure the latest python version (64-bit) is installed, it can be installed [here](https://www.python.org/downloads/).
 
 Next, go to where python is installed in the terminal/cmd prompt using 
 
